@@ -23,6 +23,10 @@ const CustomerSchema = mongoose.Schema(
         carModel: {
             type: String,
             required: false
+        },
+        businessID: {
+            type: String,
+            required: true
         }
     },
     {
