@@ -1,6 +1,6 @@
 import mongoose from 'mongoose';
 
-const CarwashSchema = mongoose.Schema(
+const BusinessSchema = mongoose.Schema(
     {
         bizname: {
             type: String,
@@ -34,3 +34,6 @@ const CarwashSchema = mongoose.Schema(
         Timestamp: true
     }
 );
+
+const Business = mongoose.model('Business', BusinessSchema)
+export default Business;
