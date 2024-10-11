@@ -4,21 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ShineTrack</title>
+    <link rel="stylesheet" href="./assets/styles/auth.css">
 </head>
 <body>
     <div class="container">
-        <div class="signup">
-            <div class="signin-image">
-                <img src="" alt="Sign in background image">
+        <div class="auth">
+            <div class="auth-image">
+                <img src="./assets/images/hero-image.jpg" alt="Sign in background image">
             </div>
-            <div class="signin-form">
-                <h4>Welcome back to <span><a href="index.html">ShineTrack</a></span></h4>
-                <p>Fill in the information below to log into your account</p>
+            <div class="auth-form login">
+                <h2>Welcome back to <span><a href="index.html">ShineTrack</a></span></h2>
+                <p class="description">Fill in the information below to log into your account</p>
                 <form action="" method="post">
-                    <input type="text" name="phonenumber" placeholder="Phone Number">
-                    <input type="text" id="pwd" name="password" placeholder="Enter password">
-                    <div class="signup-button">
-                        <input type="button" value="Sign in">
+                    <p class="label">Phone Number:</p>
+                    <input type="text" name="phonenumber" required>
+                    <p class="label">Enter Password:</p>
+                    <input type="text" id="pwd" name="password" required>
+                    <div class="login-button">
+                        <button class="auth-button">Sign In</button>
                     </div>
                 </form>
                 <div class="redirect">

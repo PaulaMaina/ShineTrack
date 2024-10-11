@@ -4,26 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ShineTrack</title>
+    <link rel="stylesheet" href="./assets/styles/auth.css">
 </head>
 <body>
     <div class="container">
-        <div class="signup">
-            <div class="signup-image">
-                <img src="" alt="Sign up background image">
+        <div class="auth">
+            <div class="auth-image">
+                <img src="./assets/images/hero-image.jpg" alt="Sign up background image">
             </div>
-            <div class="signup-form">
-                <h4>Welcome to <span><a href="index.html">ShineTrack</a></span></h4>
-                <p>Fill in the information below to register</p>
+            <div class="auth-form">
+                <h2>Welcome to <span><a href="index.html">ShineTrack</a></span></h2>
+                <p class="description">Fill in the information below to register</p>
                 <form action="" method="post">
-                    <div class="user-info">
-                        <input type="text" name="firstname" placeholder="First Name">
-                        <input type="text" name="lastname" placeholder="Last Name">
+                    <div class="username">
+                        <div class="user-info">
+                            <p class="label">First Name:</p>
+                            <input type="text" name="firstname" required>
+                        </div>
+                        <div class="user-info">
+                            <p class="label">Last Name:</p>
+                            <input type="text" name="lastname" required>
+                        </div>
                     </div>
-                    <input type="text" name="phonenumber" placeholder="Phone Number">
-                    <input type="text" id="pwd" name="password" placeholder="Enter password">
-                    <input type="text" id="confirm-pwd" placeholder="Confirm Password">
+                    <p class="label">Phone Number:</p>
+                    <input type="text" name="phonenumber" required>
+                    <p class="label">Enter Password:</p>
+                    <input type="text" id="pwd" name="password" required>
+                    <p class="label">Confirm Password:</p>
+                    <input type="text" id="confirm-pwd" required>
                     <div class="signup-button">
-                        <input type="button" value="Sign up">
+                        <button class="auth-button">Sign up</button>
                     </div>
                 </form>
                 <div class="redirect">
