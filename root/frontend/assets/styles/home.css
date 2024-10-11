@@ -2,6 +2,7 @@
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
     background-color: #ffffffd8;
+    font-size: 16px;
 }
 
 .container {
@@ -21,7 +22,7 @@
 
 .menu ul {
     margin: 0 20px;
-    font-size: 16px;
+    font-size: 14px;
     display: flex;
     list-style: none;
 }
@@ -37,7 +38,7 @@
     padding: 10px;
     margin-right: 10px;
     color: black;
-    font-size: 16px;
+    font-size: 14px;
     font-family: Arial, Helvetica, sans-serif;
     text-decoration: none;
 }
@@ -68,7 +69,7 @@
     width: 600px;
     padding-top: 100px;
     margin-left: 30px;
-    font-size: 18px;
+    font-size: 16px;
     text-align: left;
     color: #000;
 }
@@ -85,7 +86,7 @@
     background-color: #000;
     color: #fff;
     text-align: center;
-    font-size: 20px;
+    font-size: 16px;
     font-weight: 700;
     border: none;
     border-radius: 20px;
@@ -93,11 +94,12 @@
 
 h2 {
     text-align: center;
-    font-size: 30px;
+    font-size: 26px;
+    font-weight: bold;
 }
 
 .about p {
-    font-size: 20px;
+    font-size: 16px;
     text-align: center;
 }
 
@@ -106,6 +108,7 @@ h2 {
     grid-template-columns: auto auto auto;
     row-gap: 50px;
     margin-left: 200px;
+    font-size: 14px;
 }
 
 .feature-card {
@@ -156,7 +159,7 @@ h2 {
     margin-top: 20px;
     background-color: #000;
     color: #fff;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 700;
     width: 400px;
     padding: 10px;
