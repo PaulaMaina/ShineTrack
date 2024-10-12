@@ -5,10 +5,19 @@
 }
 
 .nav-bar {
-    display: flex;
-    padding: 10px;
-    width: auto;
-    margin: 0;
+    position: relative;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    row-gap: 100px;
+    margin: -10px 0 0 -10px;
+    background-color: #0e97cc;
+    height: 70px;
+}
+
+.logo img {
+    width: 50px;
+    height: 50px;
+    margin: 10px 0 0 60px;
 }
 
 .profile img {
@@ -16,4 +25,50 @@
     height: 50px;
     border: none;
     border-radius: 50%;
+    margin: 10px 30px 0 200px;
+    float: right;
+}
+
+.search {
+    margin: 20px 200px 20px 400px;   
+}
+
+.search input {
+    width: 300px;
+    height: 30px;
+    border: none;
+    border-radius: 10px;
+    background-color: #fff;
+    opacity: .7;
+    color: #fff;
+    font-size: 14px;
+}
+
+.search button {
+    width: auto;
+    height: 30px;
+    background-color: #ff4500;
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 5px 20px;
+    border: none;
+    border-radius: 10px;
+}
+
+.sidebar {
+    position: absolute;
+    height: 100%;
+    width: 200px;
+    margin-left: -10px;
+    background-color: #0e97cc;
+}
+
+.sidemenu-item {
+    display: flex;
+    row-gap: 10px;
+}
+
+.sidemenu-item li {
+    list-style: none;
 }
