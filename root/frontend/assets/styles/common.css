@@ -205,9 +205,9 @@
 .popup .close {
     position: absolute;
     font-size: 40px;
-    color: #0d3e82;
+    color: #0e87cc;
     cursor: pointer;
-    right: 25%;
+    right: 27%;
 }
 
 .popup .input-fields {
@@ -225,7 +225,7 @@
 }
 
 .popup button {
-    background-color: #0d3e82;
+    background-color: #0e87cc;
     display: block;
     color: #fff;
     border: none;
