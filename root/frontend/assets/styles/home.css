@@ -1,7 +1,6 @@
 * {
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
-    background-color: #ffffffd8;
     font-size: 16px;
 }
 
@@ -22,7 +21,6 @@
 
 .menu ul {
     margin: 0 20px;
-    font-size: 14px;
     display: flex;
     list-style: none;
 }
@@ -38,7 +36,7 @@
     padding: 10px;
     margin-right: 10px;
     color: black;
-    font-size: 14px;
+    font-size: 16px;
     font-family: Arial, Helvetica, sans-serif;
     text-decoration: none;
 }
@@ -74,16 +72,21 @@
     color: #000;
 }
 
-.hero-text h1 {
+.hero-text h1,
+.hero-text span {
     font-size: 40px;
     font-weight: 900;
     text-wrap: wrap;
     margin: 0;
 }
 
+.hero-text span {
+    color: #0e87cc;
+}
+
 .hero-button {
     padding: 10px 40px;
-    background-color: #0e87cc;
+    background-color: #ff4500;
     color: #fff;
     text-align: center;
     font-size: 16px;
@@ -92,41 +95,87 @@
     border-radius: 20px;
 }
 
-h2 {
-    text-align: center;
-    font-size: 26px;
-    font-weight: bold;
+.about {
+    width: 100%;
+    background: url("../images/carwash-backdrop.jpg") no-repeat;
+    background-size: cover;
+    height: 300px;
+    margin-top: 150px;
 }
 
-.about p {
-    font-size: 16px;
+.about-info {
+    width: 600px;
+    height: 300px;
+    text-align: right;
+    color: #fff;
+    float: right;
+}
+
+.about-info h2 {
+    font-size: 30px;
+    font-weight: bold;
     text-align: center;
+    padding-right: 80px;
+    padding-top: 30px;
+}
+
+.about-info p {
+    font-size: 18px;
+    text-align: center;
+    padding-right: 50px;
 }
 
 .features {
     display: grid;
     grid-template-columns: auto auto auto;
     row-gap: 50px;
-    margin-left: 200px;
+    margin-left: 150px;
     font-size: 14px;
 }
 
-.feature-card {
-    width: 300px;
-    border: none;
-    border-radius: 10px;
+
+.features-section h2 {
+    color: #0e87cc;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: 50px;
 }
 
-.feature-icon img {
-    height: 200px;
+.feature-card {
+    width: 250px;
+    border: none;
     border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+
+.feature-icon img {
+    width: 100%;
+    height: 200px;
+    border-radius: 10px 10px 0 0;
+}
+
+.feature-text  h4{
+    text-align: center;
+    font-size: 18px;
+    color: #0e87cc;
+}
+
+.feature-text p {
+    padding: 0 30px;
+    text-align: center;
 }
 
 .cta {
-    margin-left: 30px;
+    padding: 50px 500px;
+    margin-top: 50px;
+    background-color: #0e86ccd7;
+    color: #fff;
 }
 
 .cta h2{
+    font-size: 24px;
     text-align: left;
     margin-bottom: 0;
 }
@@ -139,7 +188,7 @@ h2 {
     margin-right: 20px;
     color: #000;
     font-size: 16px;
-    border: 1px solid #000;
+    border: 1px solid #fff;
     border-radius: 10px;
 }
 
@@ -157,7 +206,7 @@ h2 {
 
 .cta-button {
     margin-top: 20px;
-    background-color: #000;
+    background-color: #ff4500;
     color: #fff;
     font-size: 16px;
     font-weight: 700;

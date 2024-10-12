@@ -25,11 +25,11 @@
         </div>
         <div class="sidebar">
             <ul>
-                <div class="sidemenu-item selected">
+                <div class="sidemenu-item">
                     <img src="./assets/images/dashboard-icon.png" alt="Dashboard icon">
                     <li><a href="dashboard.html">Dashboard</a></li>
                 </div>
-                <div class="sidemenu-item">
+                <div class="sidemenu-item selected">
                     <img src="./assets/images/business-icon.png" alt="Business icon">
                     <li><a href="business.html">Car Washes</a></li>
                 </div>
@@ -52,59 +52,54 @@
             </ul>
         </div>
         <div class="dashboard">
-            <h1>Dashboard</h1>
-            <div class="highlights">
-                <div class="metric">
-                    <div class="metric-label">
-                        <p>No. of Washes</p>
-                    </div>
-                    <form action="" method="get">
-                        <input class="data" type="number" value="10">
-                    </form>
-                </div>
-                <div class="metric">
-                    <div class="metric-label">
-                    <p>Earnings this week</p>
-                    </div>
-                    <form action="" method="get">
-                        <input class="data" type="number" value="1000">
-                    </form>
-                </div>
-                <div class="metric">
-                    <div class="metric-label">
-                        <p>Total earnings</p>
-                    </div>
-                    <form action="" method="get">
-                        <input class="data" type="number" value="Ksh. 100000">
-                    </form>
-                </div>
-            </div>
-            <div class="customers" id="entries">
-                <h2>Top Customers</h2>
+            <h1>Car Wash Businesses</h1>
+            <div id="entries">
                 <table>
                     <tr>
                         <th>No.</th>
-                        <th>Customer Name</th>
-                        <th>Total Washes</th>
+                        <th>Business Name</th>
+                        <th>Location</th>
+                        <th>Telephone Number</th>
+                        <th>Opening Hours</th>
+                        <th>Closing Hours</th>
                     </tr>
                     <tr>
                         <td>1</td>
-                        <td>Pauline Maina</td>
-                        <td>5</td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>Pauline Maina</td>
-                        <td>5</td>
-                    </tr>
-                    <tr>
-                        <td>3</td>
-                        <td>Pauline Maina</td>
-                        <td>5</td>
+                        <td>Classic Car Wash</td>
+                        <td>Nairobi, Kenya</td>
+                        <td>+254712345678</td>
+                        <td>8:00 am</td>
+                        <td>11:00 pm</td>
                     </tr>
                 </table>
             </div>
+            <div class="add-new">
+                <button onclick="openPopup()"><i class="fa fa-plus"></i></button>
+            </div>
+            <div class="pop-overlay" id="popOverlay">
+                <div class="popup" id="popup">
+                    <span class="close" id="closePopup">&times;</span>
+                    <div class="content">
+                        <h2>Register your carwash business today!</h2>
+                        <p>Fill in the information below:</p>
+                        <form action="/business" method="POST">
+                            <p class="input-fields">Business Name*</p>
+                            <input type="text" name="bizName" required>
+                            <p class="input-fields">Business Address*</p>
+                            <input type="text" name="bizAddress" required>
+                            <p class="input-fields">Business Tel. Number*</p>
+                            <input type="number" name="bizPhoneNumber" required>
+                            <p class="input-fields">Opening Hours</p>
+                            <input type="text" name="openingHours" required>
+                            <p class="input-fields">Closing Hours</p>
+                            <input type="text" name="closingHours" required>
+                            <button type="submit" onclick="bizRegistered()">Register</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
+    <script src="./assets/scripts/script.js"></script>
 </body>
 </html>
