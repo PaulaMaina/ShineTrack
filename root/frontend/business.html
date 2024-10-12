@@ -74,7 +74,29 @@
                 </table>
             </div>
             <div class="add-new">
-                <button><i class="fa fa-plus"></i></button>
+                <button onclick="openPopup()"><i class="fa fa-plus"></i></button>
+            </div>
+            <div class="pop-overlay" id="popOverlay">
+                <div class="popup" id="popup">
+                    <span class="close" id="closePopup">&times;</span>
+                    <div class="content">
+                        <h2>Register your carwash business today!</h2>
+                        <p>Fill in the information below:</p>
+                        <form action="/business" method="POST">
+                            <p class="input-fields">Business Name*</p>
+                            <input type="text" name="bizName" required>
+                            <p class="input-fields">Business Address*</p>
+                            <input type="text" name="bizAddress" required>
+                            <p class="input-fields">Business Tel. Number*</p>
+                            <input type="number" name="bizPhoneNumber" required>
+                            <p class="input-fields">Opening Hours</p>
+                            <input type="text" name="openingHours" required>
+                            <p class="input-fields">Closing Hours</p>
+                            <input type="text" name="closingHours" required>
+                            <button type="submit" onclick="bizRegistered()">Register</button>
+                        </form>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
