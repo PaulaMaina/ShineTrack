@@ -1,7 +1,6 @@
 * {
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 16px;
 }
 
 .nav-bar {
@@ -95,4 +94,84 @@
 .selected {
     background-color: #ff4500;
     border-radius: 10px;
+}
+
+.dashboard {
+    margin-left: 250px;
+}
+
+.highlights {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.metric {
+    display: block;
+    width: 700px;
+    height: 100px;
+    margin-right: 200px;
+    padding: 10px 40px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.metric-label {
+    display: flex;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.metric input {
+    border: none;
+    font-size: 30px;
+    font-weight: bold;
+    width: 100%;
+    background-color: none;
+}
+
+#entries {
+    width: 100%;
+    border-collapse: collapse;
+    padding-right: 20px;
+    margin-top: 50px;
+}
+
+#entries td, #entries th{
+    border: 1px solid #ddd;
+    padding: 10px;
+    padding-left: 50px;
+}
+
+#entries tr:nth-child(even){
+    background-color: #f2f2f2;
+}
+
+#entries tr:hover {
+    background-color: #ddd;
+}
+
+#entries th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #0e87cc;
+  color: #fff;
+}
+
+.add-new button {
+    background-color: #ff4500;
+    width: 80px;
+    height: 80px;
+    float: right;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    position: fixed;
+    bottom: 5vw;
+    right: 5vw;
+    display: block !important;
+    z-index: 99999;
+    font-size: 45px;
+    cursor: pointer;
 }

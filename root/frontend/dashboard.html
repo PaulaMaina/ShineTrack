@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ShineTrack</title>
     <link rel="stylesheet" href="./assets/styles/common.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
     <div class="container">
@@ -54,28 +55,32 @@
             <h1>Dashboard</h1>
             <div class="highlights">
                 <div class="metric">
-                    <img src="" alt="Car image">
+                    <div class="metric-label">
+                        <p>No. of Washes</p>
+                    </div>
                     <form action="" method="get">
-                        <input class="data" type="number">10
+                        <input class="data" type="number" value="10">
                     </form>
-                    <h3>No. of Washes</h3>
                 </div>
                 <div class="metric">
-                    <img src="" alt="Money icon">
+                    <div class="metric-label">
+                    <p>Earnings this week</p>
+                    </div>
                     <form action="" method="get">
-                        <input class="data" type="number">1000
+                        <input class="data" type="number" value="1000">
                     </form>
-                    <h3>Earnings this week</h3>
                 </div>
                 <div class="metric">
-                    <img src="" alt="Money icon">
+                    <div class="metric-label">
+                        <p>Total earnings</p>
+                    </div>
                     <form action="" method="get">
-                        <input class="data" type="number">10
+                        <input class="data" type="number" value="Ksh. 100000">
                     </form>
-                    <h3>Total earnings</h3>
                 </div>
             </div>
-            <div class="customers">
+            <div class="customers" id="entries">
+                <h2>Top Customers</h2>
                 <table>
                     <tr>
                         <th>No.</th>
@@ -101,9 +106,5 @@
             </div>
         </div>
     </div>
-    <footer>
-        <p>Designed and developed by Pauline Maina.</p>
-        <p>Copyright @ 2024</p>
-    </footer>
 </body>
 </html>
