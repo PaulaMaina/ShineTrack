@@ -1,7 +1,6 @@
 * {
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
-    background-color: #ffffffd8;
     font-size: 16px;
 }
 
@@ -74,11 +73,16 @@
     color: #000;
 }
 
-.hero-text h1 {
+.hero-text h1,
+.hero-text span {
     font-size: 40px;
     font-weight: 900;
     text-wrap: wrap;
     margin: 0;
+}
+
+.hero-text span {
+    color: #0e87cc;
 }
 
 .hero-button {
@@ -98,9 +102,32 @@ h2 {
     font-weight: bold;
 }
 
-.about p {
-    font-size: 16px;
+.about {
+    width: 100%;
+    background: url("../images/carwash-backdrop.jpg") no-repeat;
+    background-size: cover;
+    height: 300px;
+}
+
+.about-info {
+    width: 600px;
+    height: 300px;
+    text-align: right;
+    color: #fff;
+    float: right;
+}
+
+.about-info h2 {
     text-align: center;
+    padding-right: 80px;
+    padding-top: 30px;
+}
+
+.about-info p {
+    font-size: 16px;
+    font-weight: 500;
+    text-align: center;
+    padding-right: 50px;
 }
 
 .features {
