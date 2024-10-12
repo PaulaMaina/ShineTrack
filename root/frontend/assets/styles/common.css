@@ -66,9 +66,33 @@
 
 .sidemenu-item {
     display: flex;
-    row-gap: 10px;
+    width: 125%;
+    margin-left: -40px;
+    padding: 10px 10px;
+    border: none;
+    border-bottom: 1px solid#fff;
+}
+
+.sidemenu-item img {
+    width: 30px;
+    height: 30px;
+    margin-left: 10px;
 }
 
 .sidemenu-item li {
     list-style: none;
+    padding-top: 10px;
+    padding-left: 15px;
+}
+
+.sidemenu-item a {
+    font-size: 14px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.selected {
+    background-color: #ff4500;
+    border-radius: 10px;
 }
