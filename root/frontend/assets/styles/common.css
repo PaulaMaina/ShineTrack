@@ -139,7 +139,8 @@
 #entries td, #entries th{
     border: 1px solid #ddd;
     padding: 10px;
-    padding-left: 50px;
+    padding-left: 40px;
+    padding-right: 35px;
 }
 
 #entries tr:nth-child(even){
