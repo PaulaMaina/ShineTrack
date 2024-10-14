@@ -6,7 +6,7 @@ class UserController {
         const lastName = req.body.lastName;
         const phoneNumber = req.body.phoneNumber;
         const emailAddress = req.body.emailAddress;
-        const password = req.body;
+        const password = req.body.password;
         const userExists = await User.findOne({ phoneNumber });
 
         if (userExists) {
