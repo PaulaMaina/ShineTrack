@@ -1,3 +1,5 @@
+const Business = require('../models/business');
+
 class BusinessController {
     static async registerBusiness(req, res) {
         try {
