@@ -31,9 +31,9 @@ const BusinessSchema = mongoose.Schema(
     },
     //Automatically adds created at and updated at
     {
-        Timestamp: true
+        timestamps: true,
     }
 );
 
-const Business = mongoose.model('Business', BusinessSchema)
+const Business = mongoose.model('Business', BusinessSchema);
 export default Business;

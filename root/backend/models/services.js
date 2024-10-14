@@ -16,7 +16,7 @@ const ServiceSchema = mongoose.Schema(
         }
     },
     {
-        Timestamp: true
+        timestamps: true,
     }
 );
 
