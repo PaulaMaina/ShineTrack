@@ -6,7 +6,7 @@ const BusinessSchema = mongoose.Schema(
             type: String,
             required: true
         },
-        location: {
+        bizLocation: {
             type: String,
             required: true
         },
