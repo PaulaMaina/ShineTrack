@@ -1,5 +1,3 @@
-import mongoose from 'mongoose';
-
 class BusinessController {
     static async registerBusiness(req, res) {
         try {
@@ -9,7 +7,8 @@ class BusinessController {
                 !req.body.openingHours ||
                 !req.body.closingHours
             ) {
-                res.status(400).send({ message: 'Please fill out all the required fields to register your business' });
+                res.status(400);
+                throw new Error('Please fill out all the required fields to register your business');
             }
 
             const newBusiness = {
@@ -18,7 +17,7 @@ class BusinessController {
                 telNumber: req.body.telNumber,
                 openingHours: req.body.openingHours,
                 closingHours: req.body.closingHours,
-                bizDescription: req.body.bizDescription
+                bizDescription: req.body.bizDescription,
             };
 
             const business = await Business.create(newBusiness);
@@ -26,9 +25,10 @@ class BusinessController {
 
         } catch (error) {
             console.log(error);
-            res.status(500).send({ message: error.message});
+            res.status(500);
+            throw new Error(error);
         }
     };
 }
 
-export default BusinessController;
+module.exports = BusinessController;
