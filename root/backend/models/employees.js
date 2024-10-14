@@ -25,7 +25,7 @@ const EmployeeSchema = mongoose.Schema(
         }
     },
     {
-        Timestamp: true
+        timestamps: true,
     }
 );
 
