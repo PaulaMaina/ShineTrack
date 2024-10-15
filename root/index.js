@@ -36,7 +36,7 @@ router.get('/dashboard', (_req, res) => {
 router.get('/businesses', (_req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'business.html'));
 });
-router.get('/apii/businesses/mybusinesses', protectRoutes, BusinessController.displayBusinesses);
+router.get('/api/businesses/mybusinesses', protectRoutes, BusinessController.displayBusinesses);
 router.post('/api/businesses/register', protectRoutes, BusinessController.registerBusiness);
 
 module.exports = router;
