@@ -84,15 +84,17 @@
                         <p>Fill in the information below:</p>
                         <form action="/business" method="POST">
                             <p class="input-fields">Business Name*</p>
-                            <input type="text" name="bizName" required>
+                            <input type="text" name="bizname" required>
                             <p class="input-fields">Business Address*</p>
-                            <input type="text" name="bizAddress" required>
+                            <input type="text" name="bizLocation" required>
                             <p class="input-fields">Business Tel. Number*</p>
-                            <input type="number" name="bizPhoneNumber" required>
+                            <input type="number" name="telNumber" required>
                             <p class="input-fields">Opening Hours</p>
-                            <input type="text" name="openingHours" required>
+                            <input type="text" name="openingHours">
                             <p class="input-fields">Closing Hours</p>
-                            <input type="text" name="closingHours" required>
+                            <input type="text" name="closingHours">
+                            <p class="input-fields">Business Description</p>
+                            <input type="text" name="bizDescription">
                             <button type="submit" onclick="bizRegistered()">Register</button>
                         </form>
                     </div>
@@ -100,6 +102,7 @@
             </div>
         </div>
     </div>
+    <div id="register-message"></div>
     <script src="./assets/scripts/script.js"></script>
 </body>
 </html>
