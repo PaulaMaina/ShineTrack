@@ -1,5 +1,5 @@
 const express = require('express');
-const routes = require('./routes/index.js');
+const router = require('./routes/index.js');
 const mongoose = require('mongoose');
 require('dotenv').config();
 
@@ -9,6 +9,7 @@ const startServer = (app) => {
     const port = process.env.PORT;
 
     app.use(express.json());
+    app.use('/api', router);
 
     app.listen(port, () => {
         console.log(`Server running on port ${port}`);
@@ -28,7 +29,6 @@ const connectDB = () => {
 };
 
 connectDB();
-routes(server);
 startServer(server);
 
 module.exports = server;

@@ -16,17 +16,22 @@ const BusinessSchema = mongoose.Schema(
         },
         openingHours: {
             type: String,
-            required: true,
+            required: false,
             default: '8:00 am'
         },
         closingHours: {
             type: String,
-            required: true,
+            required: false,
             default: '8:00 pm'
         },
         bizDescription: {
             type: String,
             required: false
+        },
+        user: {
+            type: mongoose.Schema.Types.ObjectId,
+            ref: 'User',
+            required: true
         }
     },
     //Automatically adds created at and updated at
