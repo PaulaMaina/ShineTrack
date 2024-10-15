@@ -23,7 +23,7 @@ if (token) {
         };
 
         try {
-            const res = fetch('http://localhost:3000/api/businesses/new-business', {
+            const res = await fetch('http://localhost:3000/api/businesses/register', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
