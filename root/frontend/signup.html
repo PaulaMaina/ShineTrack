@@ -15,7 +15,7 @@
             <div class="auth-form">
                 <h2>Welcome to <span><a href="index.html">ShineTrack</a></span></h2>
                 <p class="description">Fill in the information below to register</p>
-                <form action="" method="post">
+                <form action="" method="post" id="user-signup">
                     <div class="username">
                         <div class="user-info">
                             <p class="label">First Name:</p>
@@ -28,6 +28,8 @@
                     </div>
                     <p class="label">Phone Number:</p>
                     <input type="text" name="phonenumber" required>
+                    <p class="label">Email Address:</p>
+                    <input type="text" name="email">
                     <p class="label">Enter Password:</p>
                     <input type="text" id="pwd" name="password" required>
                     <p class="label">Confirm Password:</p>
@@ -36,11 +38,13 @@
                         <button class="auth-button">Sign up</button>
                     </div>
                 </form>
+                <div id="signup-message"></div>
                 <div class="redirect">
                     <p>Already have an account? <span><a href="login.html">Sign In</a></span></p>
                 </div>
             </div>
         </div>
     </div>
+    <script src="./assets/scripts/userRegistration.js"></script>
 </body>
 </html>
