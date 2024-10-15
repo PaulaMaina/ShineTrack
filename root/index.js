@@ -1,8 +1,8 @@
-const BusinessController = require('../controllers/BusinessController');
+const BusinessController = require('./controllers/BusinessController');
 const express = require('express');
 const path = require('path');
-const { protectRoutes } = require('../middleware/authMiddleware');
-const UserController = require('../controllers/UserController');
+const { protectRoutes } = require('./middleware/authMiddleware');
+const UserController = require('./controllers/UserController');
 
 const router = express.Router();
 
