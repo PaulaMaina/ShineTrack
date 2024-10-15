@@ -30,6 +30,19 @@ class BusinessController {
             res.status(500).send({ error: error.message });
         }
     };
+
+    static async displayBusinesses(req, res) {
+        try {
+            // Retrieves all the businesses registed under a specific user
+            const businesses = await Business.find({ user: req.user._id });
+
+            // Send businesses to the frontend
+            res.json(businesses);
+        } catch (error) {
+            console.error(error);
+            res.status(500).json({ error: 'An error occurred while fetching the businesses'});
+        }
+    };
 }
 
 module.exports = BusinessController;
