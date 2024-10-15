@@ -1,8 +1,8 @@
 const jwt = require('jsonwebtoken');
-const User = requires('../models/users.js');
+const User = require('../models/users.js');
 const asyncHandler = require('express-async-handler');
 
-const protectRoutes = asyncHandler( asyncHandler (async (req, res, next) => {
+const protectRoutes = asyncHandler(async (req, res, next) => {
     let token;
 
     if (
@@ -17,14 +17,13 @@ const protectRoutes = asyncHandler( asyncHandler (async (req, res, next) => {
             next();
         } catch (error) {
             console.error(error);
-            throw new Error('User not authorized. Token failed');
+            res.status(401).send({ error: 'User not authorized. Token failed' });
         }
     }
 
     if (!token) {
-        res.status(401);
-        throw new Error('User not authorized. No token');
+        res.status(401).send({ error: 'User not authorized. No token' });
     }
-}));
+});
 
 module.exports = { protectRoutes };

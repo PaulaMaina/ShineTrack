@@ -27,6 +27,11 @@ const BusinessSchema = mongoose.Schema(
         bizDescription: {
             type: String,
             required: false
+        },
+        user: {
+            type: mongoose.Schema.Types.ObjectId,
+            ref: 'User',
+            required: true
         }
     },
     //Automatically adds created at and updated at

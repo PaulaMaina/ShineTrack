@@ -19,6 +19,7 @@ class BusinessController {
                 openingHours: req.body.openingHours,
                 closingHours: req.body.closingHours,
                 bizDescription: req.body.bizDescription,
+                user: req.user._id,
             };
 
             const business = await Business.create(newBusiness);
