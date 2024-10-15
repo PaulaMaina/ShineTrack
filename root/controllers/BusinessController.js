@@ -37,7 +37,7 @@ class BusinessController {
             const businesses = await Business.find({ user: req.user._id });
 
             // Send businesses to the frontend
-            res.json(businesses);
+            res.status(200).json(businesses);
         } catch (error) {
             console.error(error);
             res.status(500).json({ error: 'An error occurred while fetching the businesses'});
