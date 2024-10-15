@@ -21,7 +21,7 @@ document.getElementById('user-login').addEventListener('submit', async function 
             
             //Redirects to the dashboard page after 3 seconds
             setTimeout(() => {
-                window.location.href = '/root/frontend/dashboard.html';
+                window.location.href = '/dashboard';
             }, 3000);
         } else {
             console.error('Login attempt failed:', error.message);      //Displays the error from the backend

@@ -40,7 +40,7 @@ if (token) {
                 
                 //Redirects to the businesses page after 3 seconds
                 setTimeout(() => {
-                    window.location.href = '/root/frontend/business.html';
+                    window.location.href = '/businesses';
                 }, 3000);
             } else {
                 document.getElementById('register-message').innerText = data.message;     //Displays the message from the backend
