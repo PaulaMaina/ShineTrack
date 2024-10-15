@@ -9,8 +9,7 @@ class BusinessController {
                 !req.body.openingHours ||
                 !req.body.closingHours
             ) {
-                res.status(400);
-                throw new Error('Please fill out all the required fields to register your business');
+                res.status(400).send({ error: 'Please fill out all the required fields to register your business' });
             }
 
             const newBusiness = {
@@ -27,8 +26,7 @@ class BusinessController {
 
         } catch (error) {
             console.log(error);
-            res.status(500);
-            throw new Error(error);
+            res.status(500).send({ error: error.message });
         }
     };
 }

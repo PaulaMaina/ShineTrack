@@ -16,12 +16,12 @@ const BusinessSchema = mongoose.Schema(
         },
         openingHours: {
             type: String,
-            required: true,
+            required: false,
             default: '8:00 am'
         },
         closingHours: {
             type: String,
-            required: true,
+            required: false,
             default: '8:00 pm'
         },
         bizDescription: {
