@@ -1,4 +1,5 @@
 const User = require('../models/users');
+const generateToken = require('../utils/auth');
 
 class UserController {
     static async registerUser(req, res) {
