@@ -2,16 +2,14 @@ const BusinessController = require('../controllers/BusinessController');
 const express = require('express');
 const UserController = require('../controllers/UserController');
 
-const routes = (app) => {
-    app = express.Router();
+const router = express.Router();
 
-    app.post('/register', UserController.registerUser);
-    app.post('/login', UserController.loginUser);
+router.post('/users/register', UserController.registerUser);
+router.post('/users/login', UserController.loginUser);
 
-    //app.get('/businesses', BusinessController);
-    app.post('/new-business', BusinessController.registerBusiness);
-}
+//router.get('/businesses', BusinessController);
+router.post('/businesses/new-business', BusinessController.registerBusiness);
 
-module.exports = routes;
+module.exports = router;
 
 
