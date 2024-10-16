@@ -6,7 +6,8 @@ class CustomerController {
             const numberPlate = req.body.numberPlate;
             const firstName = req.body.firstName;
             const lastName = req.body.lastName;
-            const carCategory = req.body.carModel;
+            const carModel = req.body.carModel;
+            const phoneNumber = req.body.phoneNumber;
             const customerExists = await Customer.findOne({ numberPlate });
             
             if (customerExists){
@@ -21,6 +22,7 @@ class CustomerController {
                 firstName: firstName,
                 lastName: lastName,
                 carModel: carModel,
+                phoneNumber: phoneNumber,
                 business: req.business._id,
             };
 
