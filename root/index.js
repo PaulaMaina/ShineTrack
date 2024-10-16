@@ -1,4 +1,5 @@
 const BusinessController = require('./controllers/BusinessController');
+const CustomerController = require('./controllers/CustomerController');
 const express = require('express');
 const path = require('path');
 const { protectRoutes } = require('./middleware/authMiddleware');

@@ -17,10 +17,10 @@ class CustomerController {
             }
 
             const newCustomer = {
-                numberPlate: req.body.numberPlate,
-                firstName: req.body.firstName,
-                lastName: req.body.lastName,
-                carModel: req.body.carModel,
+                numberPlate: numberPlate,
+                firstName: firstName,
+                lastName: lastName,
+                carModel: carModel,
                 business: req.business._id,
             };
 
