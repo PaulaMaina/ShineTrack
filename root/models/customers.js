@@ -1,4 +1,3 @@
-import { ListCollectionsCursor, Timestamp } from 'mongodb';
 import mongoose from 'mongoose';
 
 const CustomerSchema = mongoose.Schema(
@@ -15,17 +14,13 @@ const CustomerSchema = mongoose.Schema(
             type: String,
             required: true
         },
-        carCategory: {
-            type: String,
-            enum: ['A1, A2, A3, B, C1, C, CD, D1, D2, D3, E, F, G'],
-            required: true
-        },
         carModel: {
             type: String,
-            required: false
+            required: true
         },
-        businessID: {
-            type: String,
+        business: {
+            type: mongoose.Schema.Types.ObjectId,
+            ref: 'Business',
             required: true
         }
     },
