@@ -27,7 +27,13 @@ const TransactionSchema = mongoose.Schema(
         },
         pickupStatus: {
             type: String,
-            enum: ['Done', 'Pending']
+            enum: ['Done', 'Pending'],
+            required: true
+        },
+        business: {
+            type: mongoose.Schema.Types.ObjectId,
+            ref: 'Business',
+            required: true
         }
     },
     {
