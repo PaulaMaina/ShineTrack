@@ -1,5 +1,6 @@
 const BusinessController = require('./controllers/BusinessController');
 const CustomerController = require('./controllers/CustomerController');
+const EmployeeController = require('./controllers/EmployeeController');
 const express = require('express');
 const path = require('path');
 const { protectRoutes } = require('./middleware/authMiddleware');
@@ -46,6 +47,13 @@ router.get('/customers', (_req, res) => {
 });
 router.get('/api/customers/mycustomers', protectRoutes, CustomerController.displayCustomer);
 router.post('/api/customers/register', protectRoutes, CustomerController.registerCustomer);
+
+// Employees routes
+router.get('/employees', (_req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'customers.html'));
+});
+router.get('/api/employees/myemployees', protectRoutes, EmployeeController.displayEmployees);
+router.post('/api/employees/register', protectRoutes, EmployeeController.registerEmployee);
 
 module.exports = router;
 
