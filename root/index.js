@@ -5,6 +5,7 @@ const express = require('express');
 const path = require('path');
 const { protectRoutes } = require('./middleware/authMiddleware');
 const UserController = require('./controllers/UserController');
+const TransactionController = require('./controllers/TransactionController');
 
 const router = express.Router();
 
@@ -54,6 +55,13 @@ router.get('/employees', (_req, res) => {
 });
 router.get('/api/employees/myemployees', protectRoutes, EmployeeController.displayEmployees);
 router.post('/api/employees/register', protectRoutes, EmployeeController.registerEmployee);
+
+// Transaction routes
+router.get('/transactions', (_req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'transactions.html'));
+});
+router.get('/api/transactions/alltransactions', protectRoutes, TransactionController.postTransactions);
+router.post('/api/transactions/new-transaction', protectRoutes, TransactionController.createTransaction);
 
 module.exports = router;
 
