@@ -22,6 +22,11 @@ const EmployeeSchema = mongoose.Schema(
             type: Number,
             required: true,
             default: 0
+        },
+        business: {
+            type: mongoose.Schema.Types.ObjectId,
+            ref: 'Business',
+            required: true
         }
     },
     {
