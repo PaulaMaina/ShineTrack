@@ -32,12 +32,19 @@ router.get('/dashboard', (_req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'dashboard.html'));
 });
 
-//Business registration
+// Business routes
 router.get('/businesses', (_req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'business.html'));
 });
 router.get('/api/businesses/mybusinesses', protectRoutes, BusinessController.displayBusinesses);
 router.post('/api/businesses/register', protectRoutes, BusinessController.registerBusiness);
+
+//Customers routes
+router.get('/customers', (_req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'customers.html'));
+});
+router.get('/api/customers/mycustomers', protectRoutes, CustomerController.displayCustomer);
+router.post('/api/customers/register', protectRoutes, CustomerController.registerCustomer);
 
 module.exports = router;
 
