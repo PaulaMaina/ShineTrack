@@ -13,7 +13,7 @@ class EmployeeController {
             if (employeeExists){
                 res.status(400).send({ error: 'This employee already exists' });
             }
-            if (!idNumber || !firstName || !lastName || !phoneNumber || salary) {
+            if (!idNumber || !firstName || !lastName || !phoneNumber || !salary) {
                 res.status(400).send({ error: 'Please fill out all the required fields to register your employee' });
             }
 
