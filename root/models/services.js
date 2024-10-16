@@ -10,8 +10,9 @@ const ServiceSchema = mongoose.Schema(
             type: Number,
             required: true
         },
-        businessID: {
-            type: String,
+        business: {
+            type: mongoose.Schema.Types.ObjectId,
+            ref: 'Business',
             required: true
         }
     },
