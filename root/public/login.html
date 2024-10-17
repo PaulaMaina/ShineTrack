@@ -20,7 +20,10 @@
                     <p class="label">Phone Number:</p>
                     <input type="text" id="phonenumber" required>
                     <p class="label">Enter Password:</p>
-                    <input type="text" id="password" required>
+                    <input type="password" id="password" required>
+                    <div class="pwd">
+                        <input type="checkbox" onclick="showPassword()"><p class="label">Show Password</p>
+                    </div>
                     <div class="login-button">
                         <button class="auth-button" type="submit">Sign In</button>
                     </div>
@@ -32,5 +35,6 @@
         </div>
     </div>
     <script src="/js/userLogin.js"></script>
+    <script src="/js/commonFunc.js"></script>
 </body>
 </html>

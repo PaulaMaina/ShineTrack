@@ -82,6 +82,21 @@
     width: 180px;
 }
 
+.pwd {
+    display: flex;
+    margin-top: 0;
+}
+
+.pwd input{
+    margin-right: 5px;
+    width: 17px;
+    padding: 0;
+}
+
+.pwd p {
+    margin-top: 12px;
+}
+
 .auth-button {
     width: 250px;
     margin-left: 50px;
@@ -120,5 +135,5 @@
 }
 
 .login-button {
-    margin-top: 60px;
+    margin-top: 30px;
 }
