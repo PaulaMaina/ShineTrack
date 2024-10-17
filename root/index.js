@@ -39,8 +39,10 @@ router.get('/dashboard', (_req, res) => {
 router.get('/businesses', (_req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'business.html'));
 });
-router.get('/api/businesses/mybusinesses', protectRoutes, BusinessController.displayBusinesses);
 router.post('/api/businesses/register', protectRoutes, BusinessController.registerBusiness);
+router.get('/api/businesses/mybusinesses', protectRoutes, BusinessController.displayBusinesses);
+router.put('/api/businesses/:id', protectRoutes, BusinessController.updateBusiness);
+router.delete('/api/businesses/:id', protectRoutes, BusinessController.deleteBusiness);
 
 //Customers routes
 router.get('/customers', (_req, res) => {
