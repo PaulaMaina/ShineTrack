@@ -236,3 +236,16 @@
     width: 50%;
     margin:20px 0 40px 25%;
 }
+
+.logout button {
+    padding: 10px 30px;
+    width: auto;
+    margin-left: 35px;
+    margin-top: 400px;
+    background-color: #ff4500;
+    border: none;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+}
