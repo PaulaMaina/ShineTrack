@@ -1,4 +1,4 @@
-import mongoose from 'mongoose';
+const mongoose  = require('mongoose');
 
 const EmployeeSchema = mongoose.Schema(
     {
@@ -35,4 +35,4 @@ const EmployeeSchema = mongoose.Schema(
 );
 
 const Employee = mongoose.model('Employee', EmployeeSchema);
-export default Employee;
+module.exports = Employee;

@@ -1,4 +1,4 @@
-const Customer = require('../models/customer');
+const Customer = require('../models/customers');
 
 class CustomerController {
     static async registerCustomer(req, res) {
