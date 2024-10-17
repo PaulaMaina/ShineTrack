@@ -17,16 +17,21 @@ document.getElementById('user-login').addEventListener('submit', async function 
             //Saves the token to localStorage
             localStorage.setItem('token', data.token);
             console.log('The token has been saved to localStorage');
-            document.getElementById('login-message').innerText = 'Login successful';
+            document.getElementById('message').style.backgroundColor = '#17af03c2';
+            document.getElementById('message').innerText = 'Login successful';
             
             //Redirects to the dashboard page after 3 seconds
             setTimeout(() => {
                 window.location.href = '/dashboard';
-            }, 3000);
+            }, 2000);
         } else {
-            console.error('Login attempt failed:', error.message);      //Displays the error from the backend
+            document.getElementById('message').style.backgroundColor = '#ff0000c4';
+            document.getElementById('message').innerHTML = data.message;     //Displays the error from the backend
+            
+            setTimeout(() => {
+                window.location.href = '/login';
+            }, 2000);
         }
-
     } catch (error) {
         console.error('Error:', error);
     }

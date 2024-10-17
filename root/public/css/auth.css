@@ -45,6 +45,18 @@
     margin: 10px 30px 50px 70px;
 }
 
+#message {
+    width: 400px;
+    border: none;
+    margin: 10px 0;
+    border-radius: 10px;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 14px;
+    font-style: italic;
+    text-wrap: wrap;
+}
+
 .auth-form input {
     display: block;
     width: 400px;

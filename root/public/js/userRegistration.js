@@ -21,17 +21,28 @@ document.getElementById('user-signup').addEventListener('submit', async function
 
         //Checks whether the user registration was successful
         if (res.ok) {
-            document.getElementById('signup-message').innerText = 'Account registration has been completed successfully!';
+            document.getElementById('message').style.backgroundColor = '#17af03c2';
+            document.getElementById('message').innerText = 'Account registration has been completed successfully!';
             
             //Redirects to the login page after 3 seconds
             setTimeout(() => {
                 window.location.href = 'login.html';
-            }, 3000);
+            }, 2000);
         } else {
-            document.getElementById('signup-message').innerText = data.message;     //Displays the message from the backend
+            document.getElementById('message').style.backgroundColor = '#ff0000c4';
+            document.getElementById('message').innerText = data.message;     //Displays the message from the backend
+            
+            setTimeout(() => {
+                window.location.href = '/register';
+            }, 2000);
         }
     } catch (error) {
-        document.getElementById('signup-message').innerText = 'An error occurred during registration. Please try again';
+        document.getElementById('message').style.backgroundColor = '#ff0000c4';
+        document.getElementById('message').innerText = 'An error occurred during registration. Please try again';
         console.error('Error:', error);
+        
+        setTimeout(() => {
+            window.location.href = '/register';
+        }, 2000);
     }
 });

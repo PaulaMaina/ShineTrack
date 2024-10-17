@@ -15,7 +15,8 @@
             <div class="auth-form login">
                 <h2>Welcome back to <span><a href="/">ShineTrack</a></span></h2>
                 <p class="description">Fill in the information below to log into your account</p>
-                <form action="" method="post" id="user-login">
+                <div id="message"></div>
+                <form method="post" id="user-login">
                     <p class="label">Phone Number:</p>
                     <input type="text" id="phonenumber" required>
                     <p class="label">Enter Password:</p>
@@ -24,7 +25,6 @@
                         <button class="auth-button" type="submit">Sign In</button>
                     </div>
                 </form>
-                <div id="login-message"></div>
                 <div class="redirect">
                     <p>Don't have an account? <span><a href="/register">Sign up</a></span> for an account today!</p>
                 </div>

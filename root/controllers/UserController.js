@@ -11,8 +11,7 @@ class UserController {
         const userExists = await User.findOne({ phoneNumber });
 
         if (userExists) {
-            res.status(400);
-            throw new Error('This user already exists');
+            res.status(400).send({ message: 'This user already exists' });
         }
 
         const user = await User.create({
@@ -30,8 +29,7 @@ class UserController {
                 token: generateToken(user._id),
             });
         } else {
-            res.status(400);
-            throw new Error('The user data is invalid');
+            res.status(400),send({ message: 'The user data is invalid' });
         }
     };
 
@@ -46,8 +44,7 @@ class UserController {
                 token: generateToken(user._id),
             });
         } else {
-            res.status(401);
-            throw new Error('Ivalid phone number or password');
+            res.status(401).send({ message: 'Invalid phone number or password' });
         }
     };
 }
