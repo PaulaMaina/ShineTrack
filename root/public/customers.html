@@ -85,18 +85,20 @@
                         <h2>Register your carwash business today!</h2>
                         <p>Fill in the information below:</p>
                         <form action="" method="POST" id="customer-register">
-                            <p class="input-fields">Client's First Name*</p>
+                            <p class="input-fields">Business Name</p>
+                            <select id="bizList-dropdown">
+                                <option value="">Select a Business:</option>
+                            </select>
+                            <p class="input-fields">First Name*</p>
                             <input type="text" id="firstName" required>
-                            <p class="input-fields">Client's Last Name*</p>
+                            <p class="input-fields">Last Name*</p>
                             <input type="text" id="lastName" required>
                             <p class="input-fields">Phone Number*</p>
                             <input type="number" id="phoneNumber" required>
                             <p class="input-fields">Number Plate*</p>
                             <input type="text" id="numberPlate" required>
                             <p class="input-fields">Car Model*</p>
-                            <input type="text" id="openingHours">
-                            <p class="input-fields">Business Name</p>
-                            <input type="dropdown" id="bizname">
+                            <input type="text" id="carModel">
                             <button type="submit" onclick="bizRegistered()">Register</button>
                         </form>
                     </div>
@@ -105,7 +107,7 @@
         </div>
     </div>
     <script src="/js/script.js"></script>
-    <!--<script src="/js/customerFunc.js"></script>-->
+    <script src="/js/customerFunc.js"></script>
     <script src="/js/commonFunc.js"></script>
 </body>
 </html>
