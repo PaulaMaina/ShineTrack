@@ -18,6 +18,10 @@ const CustomerSchema = mongoose.Schema(
             type: String,
             required: true
         },
+        phoneNumber: {
+            type: String,
+            required: true
+        },
         business: {
             type: mongoose.Schema.Types.ObjectId,
             ref: 'Business',
