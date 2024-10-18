@@ -1,0 +1,56 @@
+.features {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    row-gap: 50px;
+}
+
+.customer-card {
+    width: 250px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    line-height: .5;
+}
+
+.customer-icon img {
+    width: 100%;
+    height: 200px;
+    border-radius: 10px 10px 0 0;
+}
+.customer-card h3 {
+    margin-left: 20px;
+    margin-bottom: 0;
+    color: #0e87cc;
+}
+
+.customer-text {
+    display: flex;
+    margin: 0 10px 0 20px;
+}
+
+.customer-text h4 {
+    margin-right: 30px;
+    margin-bottom: 0;
+}
+
+.customer-text p {
+    padding-top: 5px;
+}
+
+.action-button button {
+    margin: 0 0 10px 10px;
+    background-color: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    align-items: flex-end;
+}
+
+.edit {
+    color: #03b603;
+    margin-left: 50px;
+}
+
+.delete {
+    color: #bd0000;
+}
