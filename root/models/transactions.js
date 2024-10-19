@@ -31,6 +31,11 @@ const TransactionSchema = mongoose.Schema(
             type: mongoose.Schema.Types.ObjectId,
             ref: 'Business',
             required: true
+        },
+        user: {
+            type: mongoose.Schema.Types.ObjectId,
+            ref: 'User',
+            required: true
         }
     },
     {
