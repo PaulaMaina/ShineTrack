@@ -64,6 +64,8 @@ router.get('/transactions', (_req, res) => {
 });
 router.get('/api/transactions/alltransactions', protectRoutes, TransactionController.postTransactions);
 router.post('/api/transactions/new-transaction', protectRoutes, TransactionController.createTransaction);
+router.put('/api/transactions/:id', protectRoutes, TransactionController.updateTransaction);
+router.delete('/api/transactions/:id', protectRoutes, TransactionController.deleteTransaction);
 
 module.exports = router;
 
