@@ -6,10 +6,9 @@ const TransactionSchema = mongoose.Schema(
             type: String,
             required: true,
         },
-        services: {
-            type: Array,
+        service: {
+            type: String,
             required: true,
-            default: []
         },
         totalAmount: {
             type: Number,
@@ -18,7 +17,6 @@ const TransactionSchema = mongoose.Schema(
         },
         paymentStatus: {
             type: String,
-            enum: ['Paid', 'Pending'],
             required: true
         },
         servedBy: {
@@ -27,7 +25,6 @@ const TransactionSchema = mongoose.Schema(
         },
         pickupStatus: {
             type: String,
-            enum: ['Done', 'Pending'],
             required: true
         },
         business: {
