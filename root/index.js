@@ -53,10 +53,12 @@ router.post('/api/customers/register', protectRoutes, CustomerController.registe
 
 // Employees routes
 router.get('/employees', (_req, res) => {
-    res.sendFile(path.join(__dirname, 'public', 'customers.html'));
+    res.sendFile(path.join(__dirname, 'public', 'employees.html'));
 });
 router.get('/api/employees/myemployees', protectRoutes, EmployeeController.displayEmployees);
 router.post('/api/employees/register', protectRoutes, EmployeeController.registerEmployee);
+router.put('/api/employees/:id', protectRoutes, EmployeeController.updateEmployee);
+router.delete('/api/employees/:id', protectRoutes, EmployeeController.deleteEmployee);
 
 // Transaction routes
 router.get('/transactions', (_req, res) => {
