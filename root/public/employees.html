@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShineTrack</title>
+    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="nav-bar">
+            <div class="logo">
+                <a href="/"><img src="/images/hero-image.png" alt="Logo"></a>
+            </div>
+            <div class="search">
+                <form action="" method="get">
+                    <input type="text" name="search">
+                    <button class="search-button">Search</button>
+                </form>
+            </div>
+            <div class="profile">
+                <img src="/images/default-profile.jpg" alt="Profile image">
+            </div>
+        </div>
+        <div class="sidebar">
+            <ul>
+                <div class="sidemenu-item">
+                    <img src="/images/dashboard-icon.png" alt="Dashboard icon">
+                    <li><a href="/dashboard">Dashboard</a></li>
+                </div>
+                <div class="sidemenu-item">
+                    <img src="/images/business-icon.png" alt="Business icon">
+                    <li><a href="/businesses">Car Washes</a></li>
+                </div>
+                <div class="sidemenu-item">
+                    <img src="/images/staff-icon.png" alt="People icon">
+                    <li><a href="/customers">Customers</a></li>
+                </div>
+                <div class="sidemenu-item">
+                    <img src="/images/inventory-icon.png" alt="Transaction icon">
+                    <li><a href="/transactions">Transactions</a></li>
+                </div>
+                <div class="sidemenu-item selected">
+                    <img src="/images/department-icon.png" alt="Staff icon">
+                    <li><a href="/employees">Staff</a></li>
+                </div>
+                <div class="sidemenu-item">
+                    <img src="/images/transaction-icon.png" alt="Money icon">
+                    <li><a href="/expenses">Expenses</a></li>
+                </div>
+            </ul>
+            <div class="logout">
+                <button onclick="logout()">Logout</button>
+            </div>
+        </div>
+        <div class="dashboard">
+            <h1>Employees</h1>
+            <div id="entries">
+                <table id="myemployees">
+                    <thead>
+                        <tr>
+                            <th>No.</th>
+                            <th>ID Number</th>
+                            <th>Full Name</th>
+                            <th>Phone Number</th>
+                            <th>Salary</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Rows will be added dynamically from the database-->
+                    </tbody>
+                </table>
+            </div>
+            <div id="outputMessage"></div>
+            <div class="add-new">
+                <button onclick="openPopup()"><i class="fa fa-plus"></i></button>
+            </div>
+            <div class="pop-overlay" id="popOverlay">
+                <div class="popup" id="popup">
+                    <span class="close" id="closePopup">&times;</span>
+                    <div class="content">
+                        <h2>Register your carwash business today!</h2>
+                        <p>Fill in the information below:</p>
+                        <form action="" method="POST" id="employee-register">
+                            <select id="bizList-dropdown">
+                                <option value="">Select a Business:</option>
+                            </select>
+                            <p class="input-fields">ID Number</p>
+                            <input type="text" id="idNumber">
+                            <p class="input-fields">First Name*</p>
+                            <input type="text" id="firstName" required>
+                            <p class="input-fields">Last Name*</p>
+                            <input type="text" id="lastName" required>
+                            <p class="input-fields">Phone Number*</p>
+                            <input type="number" id="phoneNumber" required>
+                            <p class="input-fields">Salary</p>
+                            <input type="number" id="salary">
+                            <button type="submit" onclick="bizRegistered()">Register</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="/js/script.js"></script>
+    <script src="/js/employeeFunc.js"></script>
+    <script src="/js/commonFunc.js"></script>
+</body>
+</html>
