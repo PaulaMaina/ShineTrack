@@ -20,7 +20,8 @@ const TransactionSchema = mongoose.Schema(
             required: true
         },
         servedBy: {
-            type: String,
+            type: mongoose.Schema.Types.ObjectId,
+            ref: 'Employees',
             required: true
         },
         pickupStatus: {
