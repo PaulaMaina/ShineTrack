@@ -9,6 +9,7 @@ class TransactionController {
             const paymentStatus = req.body.paymentStatus;
             const servedBy = req.body.servedBy;
             const pickupStatus = req.body.pickupStatus;
+            const business = req.body.business;
 
             if (!numberPlate ||
                 !service ||
@@ -28,6 +29,7 @@ class TransactionController {
                 servedBy: servedBy,
                 pickupStatus: pickupStatus,
                 business: business,
+                user: req.user._id
             };
 
             const transaction = await Transaction.create(newTransaction);
@@ -42,7 +44,44 @@ class TransactionController {
     static async postTransactions(req, res) {
         try {
             // Retrieves all the transactions registered under a specific business
-            const transactions = await Transaction.find({ business: req.business._id });
+            const transactions = await Transaction.aggregate([
+                {
+                    $match: { user: req.user._id }
+                },
+                {
+                    $lookup: {
+                        from: 'businesses',
+                        localField: 'business',
+                        foreignField: '_id',
+                        as: 'businessDetails'
+                    }
+                },
+                {
+                    $lookup: {
+                        from: 'employees',
+                        localField: 'servedBy',
+                        foreignField: '_id',
+                        as: 'employeeDetails'
+                    }
+                },
+                {
+                    $unwind: '$businessDetails'
+                },
+                {
+                    $unwind: '$employeeDetails'
+                },
+                {
+                    $project: {
+                        numberPlate: 1,
+                        service: 1,
+                        totalAmount: 1,
+                        'business': '$businessDetails.bizname',
+                        'servedBy': {
+                            $concat: ['$employeeDetails.firstName', ' ' , '$employeeDetails.lastName']
+                        }
+                    }
+                }
+            ]);
 
             // Send transactions to the frontend
             res.status(200).json(transactions);
@@ -57,7 +96,7 @@ class TransactionController {
             const transaction = await Transaction.findById(req.params.id);
 
             if (transaction) {
-                if (business.user.toString() === req.user._id.toString()) {
+                if (transaction.user.toString() === req.user._id.toString()) {
                     const transactionUpdate = await Transaction.findByIdAndUpdate(req.params.id, req.body, {
                         new: true,
                         runValidators: true
@@ -80,7 +119,7 @@ class TransactionController {
             const transaction = await Transaction.findById(req.params.id);
 
             if (transaction) {
-                if (business.user.toString() === req.user._id.toString()) {
+                if (transaction.user.toString() === req.user._id.toString()) {
                     await transaction.deleteOne();
                     return res.status(200).json({ message: 'Transaction deleted successfully' });
                 } else {

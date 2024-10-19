@@ -4,7 +4,7 @@ const token = localStorage.getItem('token');
 async function showTransactions() {
     if (token) {
         try {
-            const res = await fetch('http://localhost:3000/api/transactions/mytransactions', {
+            const res = await fetch('http://localhost:3000/api/transactions/alltransactions', {
                 method: 'GET',
                 headers: {
                     'Content-Type': 'application/json',
@@ -29,10 +29,10 @@ async function showTransactions() {
                         <td>${transaction.service}</td>
                         <td>${transaction.totalAmount}</td>
                         <td>${transaction.servedBy}</td>
-                        <td>${transaction.business.bizname}</td>
+                        <td>${transaction.business}</td>
                         <td>
-                            <button id="edit" onclick="editMyBusiness('${transaction._id}')">Edit</button>
-                            <button id="delete" onclick="deleteMyBusiness('${transaction._id}')">Delete</button>
+                            <button id="edit" onclick="editTransaction('${transaction._id}')">Edit</button>
+                            <button id="delete" onclick="deleteTransaction('${transaction._id}')">Delete</button>
                         </td>
                     `;
 
@@ -75,7 +75,7 @@ if (token) {
         };
 
         try {
-            const res = await fetch('http://localhost:3000/api/transactions/register', {
+            const res = await fetch('http://localhost:3000/api/transactions/new-transaction', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -105,7 +105,7 @@ if (token) {
 }
 
 // Makes an authenticated request to edit details of a specific transaction
-async function editMyTransaction(id) {
+async function editTransaction(id) {
     const newPlate = prompt('Enter the car\'s number plate: ');
     const newService = prompt('Enter a new service: ');
     const newAmount = prompt('Enter a new amount: ');
@@ -142,10 +142,10 @@ async function editMyTransaction(id) {
 }
 
 // Makes an authenticated request to delete a transaction
-async function deleteMyTransaction(id) {
+async function deleteTransaction(id) {
     if (confirm('Are you sure you want to delete this transaction?')) {
         try {
-            const res = await fetch(`/api/transaction/${id}`, {
+            const res = await fetch(`/api/transactions/${id}`, {
                 method: 'DELETE',
                 headers: {
                     'Content-Type': 'application/json',
