@@ -133,6 +133,27 @@ class TransactionController {
             return res.status(500).json({ message: 'A server error occurred while deleting the transaction' });
         }
     };
+
+    static async totalEarnings(req, res) {
+        try {
+            const totalEarnings = await Transaction.aggregate([
+                {
+                    $group: {
+                        _id: null,      // Groups all the transactions together
+                        totalAmountEarned: { $sum: '$totalAmount'}
+                    }
+                }
+            ]);
+
+            if (totalEarnings.length > 0) {
+                return res.status(200).json({ totalAmountEarned: totalEarnings[0].totalAmountEarned });
+            } else {
+                return res.status(200).json({ totalAmountEarned: 0 });
+            }
+        } catch (error) {
+            return res.status(500).json({ message: 'A server error occurred while computing the total amount earned:', error});
+        }
+    };
 }
 
 module.exports = TransactionController;
