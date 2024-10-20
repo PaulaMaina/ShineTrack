@@ -117,15 +117,17 @@
 
 .metric-label {
     display: flex;
-    font-size: 14px;
-    font-weight: 400;
+    font-size: 16px;
+    font-weight: medium;
 }
 
-.metric input {
+.metric-value {
     border: none;
     font-size: 30px;
     font-weight: bold;
     width: 100%;
+    color: #0e87cc;
+    text-align: center;
     background-color: none;
 }
 

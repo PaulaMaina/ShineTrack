@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
         const earnings = await resEarnings.json();
         if (earnings.totalAmountEarned !== undefined) {
-            document.getElementById('earnings').innerText = `${earnings.totalAmountEarned}`;
+            document.getElementById('earnings').innerText = `Ksh. ${earnings.totalAmountEarned}`;
         } else {
             document.getElementById('earnings').innerText = '0';
         }
