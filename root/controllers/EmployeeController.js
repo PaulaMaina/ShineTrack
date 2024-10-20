@@ -69,7 +69,7 @@ class EmployeeController {
                 return res.status(404).json({ message: 'Employee not found'});
             }
         } catch (error) {
-            return res.json(500).json({ message: 'A server error occurred while updating the employee details' });
+            return res.status(500).json({ message: 'A server error occurred while updating the employee details' });
         }
     };
 
