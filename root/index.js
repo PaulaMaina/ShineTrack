@@ -48,8 +48,10 @@ router.delete('/api/businesses/:id', protectRoutes, BusinessController.deleteBus
 router.get('/customers', (_req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'customers.html'));
 });
-router.get('/api/customers/mycustomers', protectRoutes, CustomerController.displayCustomer);
+router.get('/api/customers/mycustomers', protectRoutes, CustomerController.displayCustomers);
 router.post('/api/customers/register', protectRoutes, CustomerController.registerCustomer);
+router.put('/api/customers/:id', protectRoutes, CustomerController.updateCustomer);
+router.delete('/api/customers/:id', protectRoutes, CustomerController.deleteCustomer);
 
 // Employees routes
 router.get('/employees', (_req, res) => {
@@ -65,9 +67,11 @@ router.get('/transactions', (_req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'transactions.html'));
 });
 router.get('/api/transactions/alltransactions', protectRoutes, TransactionController.postTransactions);
+router.get('/api/transactions/totalEarnings', protectRoutes, TransactionController.totalEarnings);
 router.post('/api/transactions/new-transaction', protectRoutes, TransactionController.createTransaction);
 router.put('/api/transactions/:id', protectRoutes, TransactionController.updateTransaction);
 router.delete('/api/transactions/:id', protectRoutes, TransactionController.deleteTransaction);
+
 
 module.exports = router;
 
