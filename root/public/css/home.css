@@ -10,9 +10,19 @@
 }
 
 .nav-bar {
+    display: grid;
+    grid-template-columns: auto auto;
+    row-gap: 300px;
     padding: 10px;
     background-color: #fff;
     margin-bottom: 30px;
+}
+
+.logo img {
+    width: 150px;
+    height: 150px;
+    margin: -55px 400px 0 60px;
+    
 }
 
 .menu {
@@ -121,7 +131,7 @@
 
 .about-info p {
     font-size: 18px;
-    text-align: center;
+    text-align: justify;
     padding-right: 50px;
 }
 
@@ -129,7 +139,7 @@
     display: grid;
     grid-template-columns: auto auto auto;
     row-gap: 50px;
-    margin-left: 150px;
+    margin-left: 180px;
     font-size: 14px;
 }
 
