@@ -57,24 +57,10 @@
         </div>
         <div class="dashboard">
             <h1>Customers</h1>
-            <div id="customers">
-                <div class="customer-card">
-                    <div class="customer-icon">
-                        <img src="/images/car-image.jpg" alt="Car image">
-                    </div>
-                    <h3 id="customername">Paula Maina</h3>
-                    <div class="customer-text">
-                        <h4 id="numberPlate">KDP 415D</h4>
-                        <p id="phoneNumber">0712344564</p>
-                    </div>
-                    <div class="action-button">
-                        <button onclick="editCustomer()" class="edit"><i class="fa fa-pencil"></i></button>
-                        <button onclick="deleteCustomer()" class="delete"><i class="fa fa-trash"></i></button>
-                    </div>
-                    
-                </div>                
-            </div>
             <div id="outputMessage"></div>
+            <div id="customers">
+                <!-- Customer cards will be added dynamically-->               
+            </div>
             <div class="add-new">
                 <button onclick="openPopup()"><i class="fa fa-plus"></i></button>
             </div>
@@ -84,21 +70,21 @@
                     <div class="content">
                         <h2>Register your carwash business today!</h2>
                         <p>Fill in the information below:</p>
-                        <form action="" method="POST" id="customer-register">
+                        <form method="POST" id="customerRegister">
                             <p class="input-fields">Business Name</p>
                             <select id="bizList-dropdown">
-                                <option value="">Select a Business:</option>
+                                <option value="Unknown">Select a Business:</option>
                             </select>
+                            <p class="input-fields">Number Plate*</p>
+                            <input type="text" id="carPlate" required>
                             <p class="input-fields">First Name*</p>
                             <input type="text" id="firstName" required>
                             <p class="input-fields">Last Name*</p>
                             <input type="text" id="lastName" required>
                             <p class="input-fields">Phone Number*</p>
-                            <input type="number" id="phoneNumber" required>
-                            <p class="input-fields">Number Plate*</p>
-                            <input type="text" id="numberPlate" required>
+                            <input type="text" id="telephone" required>
                             <p class="input-fields">Car Model*</p>
-                            <input type="text" id="carModel">
+                            <input type="text" id="carModel" required>
                             <button type="submit" onclick="bizRegistered()">Register</button>
                         </form>
                     </div>
