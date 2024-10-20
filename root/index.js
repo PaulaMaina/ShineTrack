@@ -6,6 +6,7 @@ const path = require('path');
 const { protectRoutes } = require('./middleware/authMiddleware');
 const UserController = require('./controllers/UserController');
 const TransactionController = require('./controllers/TransactionController');
+const ExpenseController = require('./controllers/ExpenseController');
 
 const router = express.Router();
 
@@ -72,6 +73,14 @@ router.post('/api/transactions/new-transaction', protectRoutes, TransactionContr
 router.put('/api/transactions/:id', protectRoutes, TransactionController.updateTransaction);
 router.delete('/api/transactions/:id', protectRoutes, TransactionController.deleteTransaction);
 
+// Expenses routes
+router.get('/expenses', (_req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'expenses.html'));
+});
+router.get('/api/expenses/allexpenses', protectRoutes, ExpenseController.postExpenses);
+router.post('/api/expenses/new-expense', protectRoutes, ExpenseController.createExpense);
+router.put('/api/expenses/:id', protectRoutes, ExpenseController.updateExpense);
+router.delete('/api/expenses/:id', protectRoutes, ExpenseController.deleteExpense);
 
 module.exports = router;
 
