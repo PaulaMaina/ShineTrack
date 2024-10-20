@@ -3,27 +3,29 @@ const Customer = require('../models/customers');
 class CustomerController {
     static async registerCustomer(req, res) {
         try {
-            const numberPlate = req.body.numberPlate;
+            const carPlate = req.body.carPlate;
             const firstName = req.body.firstName;
             const lastName = req.body.lastName;
             const carModel = req.body.carModel;
-            const phoneNumber = req.body.phoneNumber;
-            const customerExists = await Customer.findOne({ numberPlate });
+            const telephone = req.body.telephone;
+            const business = req.body.business;
+            const customerExists = await Customer.findOne({ carPlate });
             
             if (customerExists){
                 return res.status(400).json({ error: 'This customer already exists' });
             }
-            if (!numberPlate || !firstName || !lastName || !carModel) {
+            if (!carPlate || !firstName || !lastName || !carModel || !telephone) {
                 return res.status(400).json({ error: 'Please fill out all the required fields to register your customer' });
             }
 
             const newCustomer = {
-                numberPlate: numberPlate,
+                carPlate: carPlate,
                 firstName: firstName,
                 lastName: lastName,
                 carModel: carModel,
-                phoneNumber: phoneNumber,
-                business: req.business._id,
+                telephone: telephone,
+                business: business,
+                user: req.user._id
             };
 
             const customer = await Customer.create(newCustomer);
@@ -34,10 +36,10 @@ class CustomerController {
         }
     };
 
-    static async displayCustomer(req, res) {
+    static async displayCustomers(req, res) {
         try {
-            // Retrieves all the customer registered under a specific business
-            const customers = await Customer.find({ user: req.business._id });
+            // Retrieves all the customer registered under a specific user
+            const customers = await Customer.find({ user: req.user._id });
 
             // Send customers to the frontend
             return res.status(200).json(customers);
@@ -52,7 +54,7 @@ class CustomerController {
             const customer = await Customer.findById(req.params.id);
 
             if (customer) {
-                if (customer.business.toString() === req.business._id.toString()) {
+                if (customer.user.toString() === req.user._id.toString()) {
                     const customerUpdate = await Customer.findByIdAndUpdate(req.params.id, req.body, {
                         new: true,
                         runValidators: true
@@ -66,7 +68,7 @@ class CustomerController {
                 return res.status(404).json({ message: 'Customer not found'});
             }
         } catch (error) {
-            return res.json(500).json({ message: 'A server error occurred while updating the customer details' });
+            return res.status(500).json({ message: 'A server error occurred while updating the customer details' });
         }
     };
 
@@ -75,7 +77,7 @@ class CustomerController {
             const customer = await Customer.findById(req.params.id);
 
             if (customer) {
-                if (customer.business.toString() === req.business._id.toString()) {
+                if (customer.user.toString() === req.user._id.toString()) {
                     await customer.deleteOne();
                     return res.status(200).json({ message: 'The customer was deleted successfully' });
                 } else {
@@ -85,7 +87,7 @@ class CustomerController {
                 return res.status(404).json({ message: 'The customer was not found'});
             }
         } catch (error) {
-            console.error('Error deleting business:', error);
+            console.error('Error deleting customer:', error);
             return res.status(500).json({ message: 'A server error occurred while deleting the customer' });
         }
     };
