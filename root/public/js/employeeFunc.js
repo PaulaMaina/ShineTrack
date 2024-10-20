@@ -108,7 +108,7 @@ async function editEmployee(id) {
     const newPhoneNumber = prompt('Enter a new phone number: ');
 
     if (newFirstName && newLastName && newPhoneNumber) {
-        const bizUpdate = {
+        const employeeUpdate = {
             firstName: newFirstName,
             lastName: newLastName,
             phoneNumber: newPhoneNumber
@@ -121,7 +121,7 @@ async function editEmployee(id) {
                     'Content-Type': 'application/json',
                     'Authorization': `Bearer ${token}`
                 },
-                body: JSON.stringify(bizUpdate)
+                body: JSON.stringify(employeeUpdate)
             });
 
             if (res.ok) {
