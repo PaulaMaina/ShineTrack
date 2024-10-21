@@ -2,23 +2,32 @@
 ShineTrack is a comprehensive carwash management system designed to streamline the business operations of carwash owners. It provides tools for tracking transactions, managing customers and employees, and monitoring daily performance, all within a simple and intuitive interface.
 
 ## Table of Contents
+[Project Overview](https://github.com/PaulaMaina/ShineTrack#project-overview)
+[Features](https://github.com/PaulaMaina/ShineTrack#features)
+[Project Architecture](https://github.com/PaulaMaina/ShineTrack#project-architecture)
+[Technologies Used](https://github.com/PaulaMaina/ShineTrack#technologies-used)
+[Setup Instructions](https://github.com/PaulaMaina/ShineTrack#setup-instructions)
+[Usage Guidelines](https://github.com/PaulaMaina/ShineTrack#usage-guidelines)
+[API Documentation](https://github.com/PaulaMaina/ShineTrack#api-documentation)
+[Authors](https://github.com/PaulaMaina/ShineTrack#authors)
+
 
 
 ## Project Overview
 ShineTrack helps carwash businesses organize and monitor key aspects of their operations, such as employee performance, customer management, and financial tracking. It offers a user-friendly platform to view real-time insights, handle transactions, and streamline service delivery.
 
 ## Features
-1. Transaction Tracking
+**1. Transaction Tracking**
 Track all transactions with detailed records of services, customer information, and total earnings.
 
-2. Customer Management
+**2. Customer Management**
 Manage customer profiles, including their vehicle information, to offer a personalized service experience.
 
-3. Employee Monitoring
+**3. Employee Monitoring**
 Monitor employee activities and track performance to ensure accountability and efficient operations.
 
-4. Business Insights
-Gain real-time insights into daily performance, transaction summaries, and total earnings for better decision-making.
+**4. Business Insights**
+Gain real-time insights into general performance, transaction summaries, and total earnings for better decision-making.
 
 ## Project Architecture
 The ShineTrack project follows a 3-tier architecture for scalability and maintainability:
