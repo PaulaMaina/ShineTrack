@@ -23,11 +23,11 @@ Gain real-time insights into daily performance, transaction summaries, and total
 ## Project Architecture
 The ShineTrack project follows a 3-tier architecture for scalability and maintainability:
 
-### Frontend (Presentation Layer)
+**Frontend (Presentation Layer)**
 The frontend is built using HTML, CSS, and JavaScript. It provides an intuitive interface for users to manage transactions, customers, and employees.
-### Backend (Application Layer)
+**Backend (Application Layer)**
 The backend is developed using Node.js and Express.js. It handles the business logic, API routes, and interactions with the database.
-### Database (Data Layer)
+**Database (Data Layer)**
 ShineTrack uses MongoDB as its database. The data layer is responsible for storing and retrieving customer, employee, transaction, and business data.
 
 ## Technologies Used
@@ -69,7 +69,7 @@ PORT=3000
 MONGO_URI=mongodb+srv://<username>:<password>@cluster.mongodb.net/shineTrack?retryWrites=true&w=majority      #Replace with your username and password
 JWT_SECRET=your_jwt_secret_key      #Generate a secret key and replace this
 ```
-**Step 4: Start the server
+**Step 4: Start the server**
 The frontend and backend part of this application use the same server. In the `root` directory, start the Node.js server
 ```bash
 npm start
@@ -104,5 +104,5 @@ The key features of the application are `businesses`, `customers`, `transactions
 5. DELETE `/api/feature/:id` to delete a specific data object from the database. DELETE `/api/expenses/:id` deletes the details of a specific expense.
 
 ## Authors
-**Name:** <Pauline Maina> 
+**Name:** Pauline Maina 
 **Email:** <kabura.mainap@gmail.com>
