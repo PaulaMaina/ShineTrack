@@ -2,14 +2,14 @@
 ShineTrack is a comprehensive carwash management system designed to streamline the business operations of carwash owners. It provides tools for tracking transactions, managing customers and employees, and monitoring daily performance, all within a simple and intuitive interface.
 
 ## Table of Contents
-[Project Overview](https://github.com/PaulaMaina/ShineTrack#project-overview)
-[Features](https://github.com/PaulaMaina/ShineTrack#features)
-[Project Architecture](https://github.com/PaulaMaina/ShineTrack#project-architecture)
-[Technologies Used](https://github.com/PaulaMaina/ShineTrack#technologies-used)
-[Setup Instructions](https://github.com/PaulaMaina/ShineTrack#setup-instructions)
-[Usage Guidelines](https://github.com/PaulaMaina/ShineTrack#usage-guidelines)
-[API Documentation](https://github.com/PaulaMaina/ShineTrack#api-documentation)
-[Authors](https://github.com/PaulaMaina/ShineTrack#authors)
+- [Project Overview](https://github.com/PaulaMaina/ShineTrack#project-overview)
+- [Features](https://github.com/PaulaMaina/ShineTrack#features)
+- [Project Architecture](https://github.com/PaulaMaina/ShineTrack#project-architecture)
+- [Technologies Used](https://github.com/PaulaMaina/ShineTrack#technologies-used)
+- [Setup Instructions](https://github.com/PaulaMaina/ShineTrack#setup-instructions)
+- [Usage Guidelines](https://github.com/PaulaMaina/ShineTrack#usage-guidelines)
+- [API Documentation](https://github.com/PaulaMaina/ShineTrack#api-documentation)
+- [Authors](https://github.com/PaulaMaina/ShineTrack#authors)
 
 
 
