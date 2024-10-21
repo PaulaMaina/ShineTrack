@@ -106,7 +106,7 @@
 
 .metric {
     display: block;
-    width: 750px;
+    width: auto;
     height: 100px;
     margin-right: 200px;
     padding: 10px 40px;
@@ -198,7 +198,7 @@
     border: none;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    margin-top: 5%;
+    margin-top: 2%;
     margin-left: 25%;
     width: 50%;
 }
@@ -255,7 +255,7 @@
     padding: 10px 30px;
     width: auto;
     margin-left: 35px;
-    margin-top: 350px;
+    margin-top: 250px;
     background-color: #ff4500;
     border: none;
     border-radius: 10px;
