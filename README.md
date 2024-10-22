@@ -34,8 +34,10 @@ The ShineTrack project follows a 3-tier architecture for scalability and maintai
 
 **Frontend (Presentation Layer)**
 The frontend is built using HTML, CSS, and JavaScript. It provides an intuitive interface for users to manage transactions, customers, and employees.
+
 **Backend (Application Layer)**
 The backend is developed using Node.js and Express.js. It handles the business logic, API routes, and interactions with the database.
+
 **Database (Data Layer)**
 ShineTrack uses MongoDB as its database. The data layer is responsible for storing and retrieving customer, employee, transaction, and business data.
 
@@ -106,12 +108,13 @@ You can create, edit, and delete expenses in the expense page. This helps you to
 
 ## API Documentation
 The key features of the application are `businesses`, `customers`, `transactions`, `employees`, and `expenses`. Each feature has the following routes:
-1. GET `/featurepage` to server the respective frontend HTML page
+1. GET `/featurepage` to serve the respective frontend HTML page
 2. GET `/api/feature/myfeature` to fetch the details of the feature. For instance, GET `/api/customers/mycustomers/` gets all customers from the database.
 3. POST `/api/feature/register` to create a new record. For example, POST `/api/businesses/register` creates a new business in the database.
-4. PUT `/api/feature/:id` to update a specific instance of the data in the database. PUT `/api/transactions/:id` updates the details of a specific transaction.
+4. PUT `/api/feature/:id` to update a specific object of data in the database. PUT `/api/transactions/:id` updates the details of a specific transaction.
 5. DELETE `/api/feature/:id` to delete a specific data object from the database. DELETE `/api/expenses/:id` deletes the details of a specific expense.
 
 ## Authors
 **Name:** Pauline Maina 
+
 **Email:** <kabura.mainap@gmail.com>
